@@ -1,0 +1,4 @@
+[model]
+input_size = 1
+hidden_size = 256
+num_layers = 4

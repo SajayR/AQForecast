@@ -1,0 +1,9 @@
+[dataset]
+csv_file = "data/IGI_airport.csv"
+target_column = "PM2.5 (µg/m³)"
+seq_len = 128
+pred_len = 12
+
+[dataloader]
+batch_size = 32
+num_workers = 4
