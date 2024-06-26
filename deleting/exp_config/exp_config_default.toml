@@ -1,0 +1,7 @@
+[training]
+device = "cuda"
+seq_len = 128
+pred_len = 12
+
+[saving]
+save_path = "model_checkpoints"

@@ -1,3 +1,5 @@
+# utils/data_loader.py
+
 import torch
 import pandas as pd
 from torch.utils.data import Dataset, DataLoader
@@ -46,7 +48,7 @@ class TestDataset(Dataset):
 def load_data(csv_file, target_column):
     data = pd.read_csv(csv_file)
     target_data = data[target_column].values.reshape(-1, 1)
-    return target_data
+    return torch.FloatTensor(target_data)
 
 def create_dataloaders(data, seq_len, pred_len, batch_size, num_workers):
     train_dataset = TrainDataset(data, seq_len, pred_len)
