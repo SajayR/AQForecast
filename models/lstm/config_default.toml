@@ -1,0 +1,24 @@
+[data]
+csv_file = "data/IGI_airport.csv"
+target_column = "PM2.5 (µg/m³)"
+num_workers = 4
+
+[model]
+type = "lstm"
+input_size = 1
+hidden_size = 256
+num_layers = 4
+batch_size = 32
+
+[training]
+device = "cuda"
+seq_len = 128
+pred_len = 12
+
+[optimizer]
+type = "adam"
+learning_rate = 1e-3
+num_epochs = 1
+
+[saving]
+save_path = "results/lstm_default"
